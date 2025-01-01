@@ -48,7 +48,8 @@ body{
     overflow: hidden;
 }
 .profile-card .profile-pic img{
-    border-radius: 10px;
+    border-radius: 20px;
+    width: 300px;
 }
 .profile-card .profile-details{
     display: flex;
@@ -135,6 +136,13 @@ body{
     margin-top: 1.5rem;
     border:none;
 }
+
+.download-btn:hover{
+    transform: scale(1.2);
+    border:1px solid rgba(255,255,255,0.3);
+    cursor: pointer;
+}
+
 /*****about section ****/
 .about{
     background-color: #111;
