@@ -2,127 +2,162 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website designing -K2inofocom</title>
-    <!---external css ---->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/styles/style.css">
-    <!---font awesome cdn for font icons---->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Stephen Portfolio</title>
 </head>
 <body>
-   <div class="container">
-       <div class="profile-card"> 
-            <div class="profile-pic">
-                <img src="assets/images/avatar.jpg" alt="user avatar">
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Stephen <span>Santos</span>
             </div>
-
-            <div class="profile-details">
-                 <div class="intro">
-                    <h2>Stephen Santos</h2>
-                    <h4>Fullstack Developer</h4>
-                    <div class="social">
-                        <a href="https://join.skype.com/invite/yTO8jfDP0rcz"><i class="fab fa-skype" style="color:var(--blue)"></i></a>
-                        <a href="#"><i class="fab fa-viber"  style="color:var(--skyblue)"></i></a>
-                        <a href="https://github.com/RikuItsuki"><i class="fab fa-github"  style="color:var(--dark-pink)"></i></a>
-                        <a href="https://linkedin.com/in/stephen-riku"><i class="fab fa-linkedin"  style="color:var(--light-blue)"></i></a>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a id="home" href="#home" onclick="toggleSection(this)">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a id="skills" href="#skills" onclick="toggleSection(this)">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a id="experience" href="#experience" onclick="toggleSection(this)">Experiences</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a id="project" href="#project" onclick="toggleSection(this)">Project</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a id="contact" href="#contact" onclick="toggleSection(this)">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#home">Home</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#project">Project</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="assets/images/avatar.jpg" alt="">
+            </div>
+            <div class="content">
+                <div class="home" id="home">
+                    <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Stephen</span></h1>
+                    <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                        Motivated Full Stack Developer with a hands-on experience specializing in Ruby on Rails. Demonstrated ability
+                        to build and maintain robust web applications, with a solid understanding of both front-end and back-end
+                        development.
+                    </p>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/RikuItsuki" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fab fa-github"></i></a>
+                        <a href="https://join.skype.com/invite/yTO8jfDP0rcz" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fab fa-skype"></i></a>
+                        <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fab fa-viber"></i></a>
+                        <a href="https://linkedin.com/in/stephen-riku" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fab fa-linkedin"></i></a>
                     </div>
-                 </div>
-
-                 <div class="contact-info">
-                    <div class="row">
-                         <div class="icon">
-                            <i class="fa fa-phone"  style="color:var(--dark-magenta)"></i>
-                         </div>
-                         <div class="content">
-                            <span>Phone</span>
-                            <h5>0969-251-0552</h5>
-                         </div>
+                    <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+                        <button class="resume"> Resume </button>
                     </div>
+                </div>
+                
+                <div class="skills d-none" id="skills">
+                    <h1><span>Languages</span></h1>
+                        <div class="skills-list">
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-html5"></i>
+                                <p>HTML</p>
+                            </div>
 
-                    <div class="row">
-                        <div class="icon">
-                           <i class="fa fa-envelope-open"  style="color:var(--light-green)"></i>
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-css3"></i>
+                                <p>CSS</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-js"></i>
+                                <p>Javascript</p>
+                            </div> 
                         </div>
-                        <div class="content">
-                           <span>Email</span>
-                           <h5>stephenriku.04@gmail.com</h5>
+
+                    <h1><span>Frameworks</span></h1>
+                        <div class="skills-list">
+                            <div class="skills-item center">
+                                <i class="fa-solid fa-code"></i>
+                                <p>Ruby on Rails</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-solid fa-database"></i>
+                                <p>MySQL</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <p>Git</p>
+                            </div>   
+
+                            <div class="skills-item center">
+                                <i class="fa-solid fa-code"></i>
+                                <p>Ruby on Rails</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-solid fa-database"></i>
+                                <p>MySQL</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-git-alt"></i>
+                                <p>Git</p>
+                            </div>   
                         </div>
-                   </div>
-    
-                   <div class="row">
-                    <div class="icon">
-                       <i class="fa fa-map-marker"  style="color:var(--light-purple)"></i>
+
+                    <h1><span>Tools</span></h1>
+                        <div class="skills-list">
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-microsoft"></i>
+                                <p>HTML</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-html5"></i>
+                                <p>HTML</p>
+                            </div>
+
+                            <div class="skills-item center">
+                                <i class="fa-brands fa-html5"></i>
+                                <p>HTML</p>
+                            </div> 
+                        </div>
+                </div>
+                
+                <div class="experience d-none" id="experience">
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.
+                    </p>
+                </div>
+                
+                <div class="project d-none" id="project">
+                    <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit quasi commodi quia rerum, iste corporis expedita in excepturi nesciunt repellendus quisquam amet provident ad mollitia debitis odit voluptatem necessitatibus tempora.
+                    </p>
+                </div>
+
+                <div class="contact d-none" id="contact">
+                    <div class="contact-info">
+                        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa fa-phone"></i> 0969-251-0552 </div>
+                        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa fa-envelope-open"></i> stephenriku.04@gmail.com </div>
+                        <div data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa fa-map-marker"></i> Metro Manila, Philippines </div>
                     </div>
-                    <div class="content">
-                       <span>Location</span>
-                       <h5>Metro Manila, Philippines</h5>
-                    </div>
-                 </div>
+                </div>
 
             </div>
-               <button class="download-btn" onclick=" window.open('assets/files/resume.pdf','_blank')"> <i class="fa fa-download"></i> Download CV</button>
-            </div>
-       </div>
-
-       <!----about section ----->
-       <div class="about">
-           <h1>About Me</h1>
-
-           <p> Motivated Full Stack Developer with a hands-on experience specializing in Ruby on Rails. Demonstrated ability
-            to build and maintain robust web applications, with a solid understanding of both front-end and back-end
-            development.
-          </p>
-
-          <p>
-            Known for strong analytical skills, attention to detail, and a proactive approach to problem
-            solving. Highly adaptable and eager to learn new programming languages and technologies to broaden skill set
-             and contribute effectively to dynamic development teams.
-          </p>
-
-          <h2>Skills</h2>
-          <div class="work">
-             <div class="workbox">
-                 <div class="icon">
-                    <img src="assets/images/ui.svg" alt="">
-                 </div>
-                 <div class="desc">
-                    <h3>Languages</h3>
-                    <p>HTML CSS JavaScript AJAX jQuery</p>
-                 </div>
-             </div>
-
-             <div class="workbox">
-                <div class="icon">
-                   <img src="assets/images/app.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3>Libraries and Framework</h3>
-                   <p>Ruby on Rails MySQL</p>
-                </div>
-            </div>
-
-            <div class="workbox">
-                <div class="icon">
-                   <img src="assets/images/api.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3>Tools</h3>
-                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-            </div>
-
-            <div class="workbox">
-                <div class="icon">
-                   <img src="assets/images/web.svg" alt="">
-                </div>
-                <div class="desc">
-                   <h3></h3>
-                   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam euismod volutpat.</p>
-                </div>
-            </div>
-          </div>
-       </div>
-   </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="assets/javascripts/script.js"></script>
 </body>
 </html>
