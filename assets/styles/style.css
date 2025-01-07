@@ -100,26 +100,32 @@ nav{
 .dropdown .links a:hover{
     background-color: var(--first-color);
 }
-section{
+
+.container{
     width: 100%;
-    height: 90vh;
+    height: 50vh;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 11rem;
 }
+
 .main-container{
     width: 100%;
     height: 100%;
-    display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 .main-container .image{
-    width: 500px;
-    height: 50vh;
+    width: auto;
+    height: auto;
     border-radius: 100%;
     overflow: hidden;
+    margin-top: 50px;
     box-shadow: 0 0 50px var(--first-color);
 }
 .main-container .image img{
     width: 100%;
+    height: 100%;
 }
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
@@ -137,8 +143,9 @@ section{
 }
 .main-container .content{
     color: var(--second-color);
-    width: 40%;
+    width: 50%;
     min-height: 100px;
+    padding-left: 100px;
 }
 .content h1{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
@@ -195,102 +202,24 @@ section{
     transition: 0.2s linear;
 }
 
-.content button{
-    width: 50%;
+.content-button{
+    width: 90%;
     height: 6vh;
-    margin: 30px;
+    margin: 20px;
     background-color: var(--first-color);
     color: var(--second-color);
     border: none;
     outline: none;
-    font-size: 120%;
-    font-weight: 700;
+    font-size: 100%;
+    font-weight: auto;
     border-radius: 5px;
     transition: 0.2s linear;
 }
-.content button:hover{
+.content-button:hover{
     scale: 1.1;
-    color: var(--first-color);
-    border: 2px solid var(--first-color);
-    background-color: transparent;
-    font-weight: 700;
-    box-shadow: 0 0 40px var(--first-color);
-}
-@media (max-width:884px) {
-    nav .logo{
-        position: absolute;
-        top: 16px;
-        left: 15px;
-        font-size: 1.5rem;
-    }
-    .main-container {
-        display: flex;
-        flex-direction: column;
-    }
-    .nav-container .links{
-        display: none;
-    }
-    .hamburg,
-    .cancel{
-        display: block;
-    }
-    .main-container .content{
-        width: 80%;
-        padding-top: 5rem;
-    }
-    .social-links i{
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
-
-    .contact-info i {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
-
-    .main-container .image{
-        z-index: -1;
-        width: 50%;
-        height: 30%;
-    }
-
-    .skills {
-        width: 80%;
-    }
-
-    .experience {
-        padding-top: 20rem;
-    }
-}
-@media (max-width:440px){
-    .main-container .image{
-        width: 50%;
-        height: 30%;
-        margin-bottom: 0px;
-    }
-    .main-container .content{
-        width: 80%;
-    }
-    .main-container button{
-        margin-top: 15px;
-    }
-}
-
-.d-none {
-    display: none;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 5px;
-}
-
-.skills-item i{
-    font-size: 3.5rem;
-    transition: .8s;
+    color: var(--second-color);
+    font-weight: 500;
+    box-shadow: 0 0 20px var(--first-color);
 }
 
 .center { 
@@ -302,104 +231,8 @@ section{
     cursor: pointer;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.timeline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    padding: 0 9%;
-}
-
-.timeline .timeline-row {
-    display: flex;
-    column-gap: 32px;
-    flex-wrap: wrap;
-}
-
-.timeline-row .timeline-column {
-    flex: 2 320px;
-}
-
-/** 
-.timeline-column .title {
-    position: relative;
-    display: inline-block;
-    font-size: 14;
-    margin: 16 0 8px 15px;
-    color: var(--first-color);
-}
-**/
-
-.timeline-column .timeline-box {
-    position: relative;
-    border-left: 2px solid var(--first-color);
-}
-
-.timeline-box .timeline-content {
-    position: relative;
-    padding-left: 13px;
-}
-
-.timeline-box .timeline-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -5.5px;
-    width: 10px;
-    height: 10px;
-    background: var(--first-color);
-    border-radius: 100%;
-}
-
-.timeline-content .sub-content {
-    padding: 12px;
-    border: 2px solid var(--first-color);
-    border-radius: 8px;
-    margin-bottom: 16px;
-}
-
-.timeline-content .sub-content .year {
-    font-size: 20px;
-    color: #0ef;
-}
-
-.timeline-content .sub-content .year i {
-    margin-right: 4px;
-}
-
-.timeline-content .sub-content h3 {
-    font-size: 32px;
-    margin: 4px 0;
-    color: var(--first-color);
-}
-
-.timeline-content .sub-content li {
-    font-size: 15px;
-    padding-bottom: 2px;
-}
-
-.animate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 105%;
-    height: 100%;
-    background: var(--fourth-color);
-    animation: show-right 200ms ease forwards;
-    animation-delay: calc(100ms * var(--i));
-}
-
-@keyframes show-right {
-    100% {
-        width: 0;
-    }
+.skill-box .title {
+    margin-bottom: 4px;
 }
 
 .details-box {
@@ -417,35 +250,10 @@ section{
 }
 
 /*** Skills Styles ***/
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-.bar{
-    position: relative;
-    width: 100%;
-    margin: 0 10px;
-    padding: 10px 20px;
-    border-radius: 7px;
-    display: flex;
-    gap: 10px;
-    max-height: 100rem;
-}
 
-.column {
-    flex: 1; 
-    overflow-y: auto; 
-    max-height: 100%; 
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.bar .skill-box{
+.skill-box{
     width: 100%;
-    margin: 25px 0;
+    margin-bottom: 25px;
 }
 .skill-box .title{
     display: block;
@@ -453,131 +261,204 @@ section{
     font-weight: 600;
     color: var(--second-color);
 }
-.skill-box .skill-bar{
-    height: 8px;
-    width: 100%;
-    border-radius: 6px;
-    margin-top: 6px;
-    background: var(--third-color);
-}
 
 .skill-box h2 {
     margin-bottom: 10px;
     color: var(--second-color);
 }
-.skill-bar .skill-per{
-    position: relative;
-    display: block;
-    height: 100%;
-    border-radius: 6px;
+.progress {
+    background-color: var(--third-color);
+    height: 12px;
+    font-size: 11px;
+    
+}
+.progress-bar{
     background: var(--first-color);
-    animation: progress 0.4s ease-in-out forwards;
-    opacity: 0;
 }
 
-/*** Skills Bar for Langauge ***/
-.skill-per.html{
-    width: 90%;
-    animation-delay: 0.5s;
+/*** Experience Styles ***/
+.collapsible {
+  background-color: var(--first-color);
+  color: var(--third-color);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
 
-.skill-per.css{
-    width: 87%;
-    animation-delay: 0.5s;
-}
-.skill-per.javascript{
-    width: 87%;
-    animation-delay: 0.5s;
+.active, .collapsible:hover {
+  background-color: var(--first-color);
 }
 
-/*** Skills Bar for Framework and Libraries ***/
-.skill-per.ruby-on-rails{
-    width: 87%;
-    animation-delay: 0.5s;
+.collapsible:after {
+  content: '\002B';
+  color: var(--third-color);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
 }
 
-.skill-per.bootstrap{
-    width: 82%;
-    animation-delay: 0.5s;
+.active:after {
+  content: "\2212";
 }
 
-.skill-per.jquery{
-    width: 78%;
-    animation-delay: 0.5s;
+.exp-details {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: var(--third-color);
+  border: 2px solid var(--first-color);
 }
 
-.skill-per.ajax{
-    width: 78%;
-    animation-delay: 0.5s;
+/*** Experience Style ***/
+.card {
+    background-color: inherit;
+}
+.timeline {
+    border-left: 3px solid var(--first-color);
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    background: rgba(114, 124, 245, 0.09);
+    margin: 0 auto;
+    letter-spacing: 0.2px;
+    position: relative;
+    line-height: 1.4em;
+    font-size: 1.03em;
+    padding: 50px;
+    list-style: none;
+    text-align: left;
+    max-width: auto;
 }
 
-.skill-per.python{
-    width: 30%;
-    animation-delay: 0.5s;
+@media (max-width: 767px) {
+    .timeline {
+        max-width: 98%;
+        padding: 25px;
+    }
 }
 
-.skill-per.c{
-    width: 30%;
-    animation-delay: 0.5s;
+.timeline h1 {
+    font-weight: 300;
+    font-size: 1.4em;
 }
 
-.skill-per.cplus{
-    width: 30%;
-    animation-delay: 0.5s;
+.timeline h2,
+.timeline h3 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-/*** Skills Bar for Framework and Libraries ***/
-.skill-per.git{
-    width: 85%;
-    animation-delay: 0.5s;
+.timeline .date {
+    border-bottom: 1px dashed var(--second-color);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
 }
 
-.skill-per.mysql{
-    width: 89%;
-    animation-delay: 0.5s;
+@media (max-width: 767px) {
+    .timeline .date {
+        padding-top: 30px;
+    }
 }
 
-.skill-per.cmd{
-    width: 90%;
-    animation-delay: 0.5s;
+.timeline .date:last-of-type {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border: none;
 }
 
-.skill-per.microsoft{
-    width: 90%;
-    animation-delay: 0.5s;
+.timeline .date:before,
+.timeline .date:after {
+    position: absolute;
+    display: block;
+    top: 0;
 }
 
+.timeline .date:before {
+    left: -207px;
+    content: attr(data-date);
+    text-align: right;
+    font-weight: 100;
+    font-size: 0.9em;
+    min-width: 120px;
+}
 
-@keyframes progress {
+@media (max-width: 767px) {
+    .timeline .date:before {
+        left: 0px;
+        text-align: left;
+    }
+}
+
+.timeline .date:after {
+    -webkit-box-shadow: 0 0 0 3px var(--first-color);
+    box-shadow: 0 0 0 3px var(--first-color);
+    left: -55.8px;
+    background: var(--second-color);
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    content: "";
+    top: 5px;
+}
+
+@media (max-width: 767px) {
+    .timeline .date:after {
+        left: -31.8px;
+    }
+}
+
+.rtl .timeline {
+    border-left: 0;
+    text-align: right;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 3px solid var(--first-color);
+}
+
+.rtl .timeline .date::before {
+    left: 0;
+    right: -170px;
+}
+
+.rtl .timeline .date::after {
+    left: 0;
+    right: -55.8px;
+}
+
+/*** Animation ***/
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 100%;
+    background: var(--fourth-color);
+    animation: show-right 200ms ease forwards;
+    animation-delay: calc(100ms * var(--i));
+}
+
+@keyframes animate {
     0%{
-        width: 0;
-        opacity: 1;
+        scale: 1;
+    }
+    50%{
+        scale: 1.05;
     }
     100%{
-        opacity: 1;
+        scale: 1;
     }
 }
-.skill-per .tooltip{
-    position: absolute;
-    right: -14px;
-    top: -28px;
-    font-size: 9px;
-    font-weight: 500;
-    color: var(--second-color);
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: var(--first-color);
-    z-index: 1;
-}
-.tooltip::before{
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -2px;
-    height: 10px;
-    width: 10px;
-    z-index: -1;
-    background-color: var(--first-color);
-    transform: translateX(-50%) rotate(45deg);
 
+@keyframes show-right {
+    100% {
+        width: 0;
+    }
 }
