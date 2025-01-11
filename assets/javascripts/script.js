@@ -65,3 +65,24 @@ for (i = 0; i < coll.length; i++) {
     } 
   });
 }
+
+function projectFilter(elem) {
+    filter = document.getElementById("cat")
+
+    filter.querySelector(".active").classList.remove("active")
+    elem.classList.add("active")
+    
+    const cat = elem.getAttribute("data-filter");
+    
+    const projects = document.querySelectorAll(".item");
+    console.log(projects)
+
+    projects.forEach((project) => {
+        if (cat === "all" || project.getAttribute("data-category") === cat) {
+            project.style.display = "block";
+        } else {
+            project.style.display = "none";
+        }
+    });
+
+}
